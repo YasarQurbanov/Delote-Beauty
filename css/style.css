@@ -47,9 +47,18 @@ table {
 /* Стили для всего сайта */
 body,html{
     width: 100%;
+    height: 100%;
     background-color: rgb(0, 0, 0);
     font-family: 'Cormorant Garamond', serif;
     font-family: 'EB Garamond', serif;
+}
+
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
 }
 
 /* Стили для шапки */
@@ -210,6 +219,7 @@ body,html{
 
 .main{
     width: 100%;
+    flex: 1 1 auto;
 }
 
 /* Первый Блок */
@@ -443,6 +453,99 @@ body,html{
     margin-bottom: 30px;
 }
 
+.masters__section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.masters__wrapper{
+    width: 100%;
+    max-width: 1320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 85px;
+    margin-bottom: 100px;
+}
+
+.masters__wrapper h1{
+    font-size: 48px;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    margin-top: 8px;
+}
+
+.masters__container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.master__card{
+    width: 100%;
+    max-width: 416px;
+    height: 595px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.master__card img{
+    position: absolute;
+    top: 20px;
+    right: 17px;
+    width: 400px;
+    height: 477px;
+}
+
+.card__image{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.card__decor{
+    width: 396px;
+    height: 477px;
+    border: 1px solid #CDAA7D;
+}
+
+.card__text{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.card__text h2{
+    font-size: 27px;
+    color: #ffffff;
+}
+
+.card__text p{
+    font-size: 18px;
+    color: #ffffffac;
+    margin-top: 10px;
+}
+
+
+
 /*Подвал*/
 
 .footer{
@@ -528,6 +631,10 @@ body,html{
 
     .section3__gallery img{
         padding-right: 30px;
+    }
+
+    .masters__container{
+        justify-content: center;
     }
 }
 
@@ -654,6 +761,24 @@ body,html{
         width: 300px;
         height: 300px;
     }
+
+    .card__image{
+        width: auto;
+    }
+
+    .card__decor{
+        width: 300px;
+        height: 377px;
+    }
+
+    .master__card img{
+        width: 300px;
+        height: 377px;
+    }
+
+    .masters__wrapper h1{
+        font-size: 41px;
+    }
 }
 
 @media (max-width: 350px) {
@@ -668,5 +793,20 @@ body,html{
 
     .gallery__card{
         margin-left: 0;
+    }
+
+    .master__card{
+        height: 454px;
+        margin-right: 0;
+    }
+
+    .card__decor{
+        width: 280px;
+        height: 347px;
+    }
+
+    .master__card img{
+        width: 280px;
+        height: 347px;
     }
 }
